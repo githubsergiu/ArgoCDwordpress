@@ -51,16 +51,15 @@ ingress:
     ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
-
   hosts:
     - host: argo-wordpress.caramans.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
-    - secretName: argo-demo-tls
+    - secretName: argo-wordpress-tls
       hosts:
-        - argo-wordpress
+        - argo-wordpress.caramans.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
