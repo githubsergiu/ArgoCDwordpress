@@ -56,6 +56,11 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
+          backend:
+            service:
+              name: wordpress  # Replace with the actual service name for WordPress
+              port:
+                number: 80
   tls: 
     - secretName: argo-wordpress-tls
       hosts:
