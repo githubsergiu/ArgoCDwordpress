@@ -53,7 +53,7 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: "true"
 
   hosts:
-    - host: argo-wordpress
+    - host: argo-wordpress.caramans.com
       paths:
         - path: /
           pathType: ImplementationSpecific
